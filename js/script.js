@@ -23,7 +23,7 @@ function imgclick()
         
         let boxchange = document.querySelectorAll('.boxelement>img');
         for(var i=0; i<boxchange.length; i++){
-            boxchange[i].src='https://static.wikia.nocookie.net/villains/images/5/52/Ashley_graves_official_artwork.png/revision/latest?cb=20230526020542'
+            boxchange[i].src='https://static.wikia.nocookie.net/villains/images/5/52/Ashley_graves_official_artwork.png'
         }   
         on = 1
 
