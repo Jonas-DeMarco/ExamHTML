@@ -32,6 +32,7 @@ title{display: none;}
   #hamburger{
     background-color: rgb(190,157,105);
     position: fixed;
+    display: block;
     z-index: 1;
     top: 0;
     right: 0;
