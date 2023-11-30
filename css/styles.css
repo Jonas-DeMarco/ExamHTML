@@ -23,21 +23,26 @@ nav{
     text-align: center; 
     background-color: aquamarine;
     height: 100vh;
+    width: 100%;
     justify-content: space-evenly;
+    align-items: center;
     
 }
 nav>a{
     width: 100vw;
     background-color: aquamarine;
+    font-size: 120%;
     text-decoration: overline underline;
     color: black;
 }
 
+
+
 #titre{
     background-color: blanchedalmond;
-    line-height: 20vh;
     text-align: center;
     font-size: 29pt;
+    padding: 10px;
     
 }
 #presentation{
@@ -51,9 +56,11 @@ h1{
     font-size: 25pt;
     padding-left: 10px;
     line-height: 15vh;
+    width: 100%;
 }
 ul{
     padding-top: 10px ;
+    padding-left: 20px;
     list-style-type: circle;
 }
 li{
@@ -94,6 +101,7 @@ li{
 
 .boxelement>h3{
     border-top: 1px solid black;
+     padding: 10px;
     
 }
 
@@ -119,28 +127,118 @@ nav{
     padding-top: 10px;
 }
 
+
 #left_elements{
-    flex-direction: row;
     flex-wrap: wrap;
+    height: 100vh;
+    background-color: tomato
+}
+#left_elements>*{
+    margin: 10px;
+    width: calc(50% - 20px);
 }
 #left_elements>img{
-    width: 50%;
-    order: 1;
+    order: 2;
+    height: calc(100% - 20px);
 }
-#left_txt{
-    width: 50%;
+#presentation{
+    justify-content: space-evenly;
+    height: calc(70% - 20px);
+    order:0;
+    margin-bottom: 0;
+}
+#presentation>h2{
+    text-align: center;
 }
 #titre{
-    order:1
+    order:1 ;
+    height: 30%;
+    margin-top:0;
 }
-.text_area{
+
+.text_elements{
     flex-direction: row;
-    flex-wrap: wrap;
+    justify-content: space-between;
 }
-.left_h2{
-    width:33% ;
+
+.unit_block{
+    padding: 10px;
 }
-.right_h2{
-    width: 33%;
+.left_h2,.right_h2{
+    width:auto ;
 }
+
+.box-container{
+    justify-content: flex-start;
+}
+.boxelement{
+    width: 30%;
+    margin: 10px;
+}
+
+
+}
+
+
+@media  (min-width:1200px) {
+
+    body{
+        flex-direction: row;
+        flex-wrap: wrap;
+        height: 100vh;  
+    }
+    
+    #left_elements{
+        width: 30%;
+        height: 90vh;
+        position: fixed;
+        top:10vh;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        
+    }
+    #left_elements>img{
+        order:0;
+        height: 50%;
+        width: 70%;
+    }
+    #titre{
+        order:0;
+        height: 15%;
+        width: 50%;
+        font-size: 20pt;
+        position: relative;
+        bottom: 90px;
+        left: 60px;
+    }
+
+    #presentation{
+        height: 30%;
+        width: 90%;
+        position: relative;
+        bottom: 60px;
+    }
+
+    #right_elements{
+        width: 70%;
+        height: 90vh;
+        overflow-y: scroll;
+        margin-left: 30%;
+    }    
+    
+    h1{
+        line-height: normal;
+    }
+    .text_area{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .unit_block{
+        width: 50%;
+    }
+    .boxelement{
+        width: calc(25% - 20px);
+    }
+
 }
