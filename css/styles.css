@@ -7,13 +7,14 @@
 
 }
 
+/*  mise en place du css de base selon la logique "mobile first   */
 
 *{
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     margin: 0;
-    background-color: rgb(234,172,181);
+    background-color: rgb(107,107,107);
     font-family: 'Shantell Sans', cursive;
     
 }
@@ -21,7 +22,7 @@ title{display: none;}
 
 nav{
     text-align: center; 
-    background-color: aquamarine;
+    background-color: rgb(190,157,105);
     height: 100vh;
     width: 100%;
     justify-content: space-evenly;
@@ -30,11 +31,12 @@ nav{
 }
 nav>a{
     width: 100vw;
-    background-color: aquamarine;
+    background-color: rgb(190,157,105);
     font-size: 120%;
     text-decoration: overline underline;
     color: black;
 }
+
 
 
 
@@ -119,7 +121,7 @@ li{
   }
 
 @media screen and (min-width:600px) {
-
+/* media query pour tablette*/
 
 nav{
     height: 10vh;
@@ -127,11 +129,11 @@ nav{
     padding-top: 10px;
 }
 
-
+/* css du contenu qui figurera a gauche au format pc */
 #left_elements{
     flex-wrap: wrap;
     height: 100vh;
-    background-color: tomato
+    background-color: rgb(241,238,157);
 }
 #left_elements>*{
     margin: 10px;
@@ -156,6 +158,7 @@ nav{
     margin-top:0;
 }
 
+/* css du contenu qui figurera a droite au format pc */
 .text_elements{
     flex-direction: row;
     justify-content: space-between;
@@ -181,13 +184,13 @@ nav{
 
 
 @media  (min-width:1200px) {
-
+/* media query pour les pc*/
     body{
         flex-direction: row;
         flex-wrap: wrap;
         height: 100vh;  
     }
-    
+/* css du contenu qui figurera a gauche au format pc */
     #left_elements{
         width: 30%;
         height: 90vh;
@@ -220,6 +223,7 @@ nav{
         bottom: 60px;
     }
 
+/*css du contenu qui figurera a gauche au format pc*/
     #right_elements{
         width: 70%;
         height: 90vh;
