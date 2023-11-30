@@ -180,8 +180,9 @@ li{
 }
 
 nav{
-    position: relative;
-    display: flex;
+    position: relative !important;
+    display: flex !important; 
+    /* important necessaire pour le faire revenir en sortant du format tel*/
     height: 10vh;
     flex-direction: row;
     padding-top: 10px;

@@ -1,5 +1,9 @@
 let on = 0
 
+
+
+
+
 //event listener pour menu burger
 window.onload = function(){
     document.getElementById("hamburger").onclick = function(){
@@ -11,15 +15,24 @@ window.onload = function(){
         document.getElementById('nav').style.display=('none')
       };
     }
-    let links = document.getElementsByClassName('navlink');
-    for (let i = 0; i<links.length;i++){
+
+
+    
+
+  
+  let links = document.getElementsByClassName('navlink');
+        for (let i = 0; i<links.length;i++){
         let link = links[i];
-        link.onclick = function (){
-            document.getElementById("hamburger").classList.toggle("is-active");
+        link.onclick = function(){
+            document.getElementById("hamburger").classList.remove("is-active");
             document.getElementById('nav').style.display=('none')
-        }
-    }
- }
+            } };
+}
+
+
+
+        
+    
 
 
 
@@ -77,6 +90,7 @@ function imgclick()
         on = 0
     }
 
-    
+
 
 }
+
