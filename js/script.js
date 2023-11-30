@@ -1,12 +1,32 @@
 let on = 0
 
+//event listener pour menu burger
+window.onload = function(){
+    document.getElementById("hamburger").onclick = function(){
+      this.classList.toggle("is-active");
+      if(this.classList.contains('is-active')){
+        document.getElementById('nav').style.removeProperty('display')
+      }
+      else{
+        document.getElementById('nav').style.display=('none')
+      };
+    }
+    let links = document.getElementsByClassName('navlink');
+    for (let i = 0; i<links.length;i++){
+        let link = links[i];
+        link.onclick = function (){
+            document.getElementById("hamburger").classList.toggle("is-active");
+            document.getElementById('nav').style.display=('none')
+        }
+    }
+ }
+
+
 
 function imgclick()
 {
     if(on == 0){ 
         let trigger = document.querySelectorAll('*');
-        
-        
         for(var i=0; i<trigger.length; i++){
             trigger[i].style.fontFamily = "baelz";
         }    
@@ -14,6 +34,7 @@ function imgclick()
         
         document.getElementById('left_elements').style.backgroundColor='rgb(130,84,148)'
         document.getElementById('nav').style.backgroundColor='rgb(107,107,107)'
+        document.getElementById('hamburger').style.backgroundColor='rgb(107,107,107)'
 
         trigger = document.querySelectorAll('nav>a');
         for(var i=0; i<trigger.length; i++){
@@ -32,7 +53,6 @@ function imgclick()
 
     } else {
         let trigger = document.querySelectorAll('*');
-        console.log(trigger);
         for(var i=0; i<trigger.length; i++){
             trigger[i].style.fontFamily = 'Shantell Sans';
         }
@@ -40,6 +60,7 @@ function imgclick()
 
         document.getElementById('left_elements').style.backgroundColor='rgb(241,238,157)'
         document.getElementById('nav').style.backgroundColor='rgb(190,157,105)'
+        document.getElementById('hamburger').style.backgroundColor='rgb(190,157,105)'
 
         trigger = document.querySelectorAll('nav>a');
         for(var i=0; i<trigger.length; i++){
@@ -59,4 +80,3 @@ function imgclick()
     
 
 }
- 
