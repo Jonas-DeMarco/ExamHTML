@@ -14,9 +14,11 @@ window.onload = function(){
       else{
         document.getElementById('nav').style.display=('none')
       };
+
+      
     }
 
-
+    
     
 
   
@@ -27,63 +29,70 @@ window.onload = function(){
             document.getElementById("hamburger").classList.remove("is-active");
             document.getElementById('nav').style.display=('none')
             } };
+            
+            
+
+
+
 }
-
-
-
-        
     
 
 
 
-function imgclick()
-{
+
+function imgclick(ImgSrc)
+{   
     if(on == 0){ 
         let trigger = document.querySelectorAll('*');
         for(var i=0; i<trigger.length; i++){
             trigger[i].style.fontFamily = "baelz";
         }    
-        document.getElementById('myimg').src="https://www.pokepedia.fr/images/thumb/2/2c/Morpeko_%28Mode_Affam%C3%A9%29-EB.png/225px-Morpeko_%28Mode_Affam%C3%A9%29-EB.png"
+        document.getElementById('myimg').src="./images/EL_Rata.png"
         
-        document.getElementById('left_elements').style.backgroundColor='rgb(130,84,148)'
-        document.getElementById('nav').style.backgroundColor='rgb(107,107,107)'
-        document.getElementById('hamburger').style.backgroundColor='rgb(107,107,107)'
-
+        document.getElementById('left_elements').style.backgroundColor='#8efff5'
+        document.getElementById('nav').style.backgroundColor='#ffe500'
+        document.getElementById('hamburger').style.backgroundColor='#ffe500'
+        
         trigger = document.querySelectorAll('nav>a');
         for(var i=0; i<trigger.length; i++){
-            trigger[i].style.backgroundColor = "rgb(107,107,107)";
+            trigger[i].style.backgroundColor = "#ffe500";
             trigger[i].style.color = 'red'
+            
         }
         
         let boxchange = document.querySelectorAll('.boxelement>img');
         for(var i=0; i<boxchange.length; i++){
-            boxchange[i].src='https://i.redd.it/7oqiqxa1sjqa1.png'
-        }   
+            boxchange[i].classList.toggle('imgchange1');
+        
+        }
+        
         on = 1
 
 
 
 
     } else {
+        console.log(ImgSrc);
         let trigger = document.querySelectorAll('*');
         for(var i=0; i<trigger.length; i++){
-            trigger[i].style.fontFamily = 'Shantell Sans';
+            trigger[i].style.fontFamily = '';
         }
-        document.getElementById('myimg').src='https://www.pokepedia.fr/images/thumb/c/c8/Morpeko_%28Mode_Rassasi%C3%A9%29-EB.png/375px-Morpeko_%28Mode_Rassasi%C3%A9%29-EB.png';
+        document.getElementById('myimg').src="./images/faker.jpg";
 
-        document.getElementById('left_elements').style.backgroundColor='rgb(241,238,157)'
-        document.getElementById('nav').style.backgroundColor='rgb(190,157,105)'
-        document.getElementById('hamburger').style.backgroundColor='rgb(190,157,105)'
+        document.getElementById('left_elements').style.backgroundColor='rgb(226,1,45)'
+        document.getElementById('nav').style.backgroundColor='blanchedalmond'
+        document.getElementById('hamburger').style.backgroundColor='blanchedalmond'
 
         trigger = document.querySelectorAll('nav>a');
         for(var i=0; i<trigger.length; i++){
-            trigger[i].style.backgroundColor = "rgb(190,157,105)";
+            trigger[i].style.backgroundColor = "blanchedalmond";
             trigger[i].style.color = 'black'
         }
         
         let boxchange = document.querySelectorAll('.boxelement>img');
         for(var i=0; i<boxchange.length; i++){
-            boxchange[i].src='https://64.media.tumblr.com/0cada83f9b0fc6f78e14790951bf6876/233b9c85ca629fa7-57/s540x810/f2848eaf6da869965e5be30cb1278d40dc819f55.gif'
+            boxchange[i].classList.toggle('imgchange1');
+        
         }
 
 
@@ -91,6 +100,4 @@ function imgclick()
     }
 
 
-
 }
-

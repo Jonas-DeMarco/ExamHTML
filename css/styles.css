@@ -1,3 +1,5 @@
+/*3 premieres regles definie pour les easter eggs*/
+
 @font-face {
     font-family: 'baelz';
     src: url('../fonts/baefont-regular-webfont.woff2') format('woff2'),
@@ -7,6 +9,14 @@
 
 }
 
+.imgchange1{
+    content:url("../images/hakos-baelz-dance.gif");
+}
+
+.imgchange2{
+    content:url('https://media.tenor.com/RK_8zCji9ZcAAAAC/never-gonna-give-you-up.gif');
+}
+
 /*  mise en place du css de base selon la logique "mobile first   */
 
 *{
@@ -14,7 +24,7 @@
     display: flex;
     flex-direction: column;
     margin: 0;
-    background-color: rgb(107,107,107);
+    background-color: rgb(120,120,120);
     font-family: 'Shantell Sans', cursive;
     
 }
@@ -30,7 +40,7 @@ title{display: none;}
     text-align: center;
   }
   #hamburger{
-    background-color: rgb(190,157,105);
+    background-color: blanchedalmond;
     position: fixed;
     display: block;
     z-index: 1;
@@ -40,7 +50,7 @@ title{display: none;}
   .hamburger .line{
     width: 60px;
     height: 5px;
-    background-color: #ecf0f1;
+    background-color: rgb(226,1,45) ;
     display: block;
     margin: 8px auto;
     -webkit-transition: all 0.3s ease-in-out;
@@ -74,7 +84,7 @@ title{display: none;}
 
 nav{
     text-align: center; 
-    background-color: rgb(190,157,105);
+    background-color: blanchedalmond;
     height: 100vh;
     width: 100%;
     position:fixed;
@@ -84,7 +94,7 @@ nav{
 }
 nav>a{
     width: 100vw;
-    background-color: rgb(190,157,105);
+    background-color: blanchedalmond;
     font-size: 120%;
     text-decoration: overline underline;
     color: black;
@@ -192,7 +202,7 @@ nav{
 #left_elements{
     flex-wrap: wrap;
     height: 100vh;
-    background-color: rgb(241,238,157);
+    background-color: rgb(226,1,45);
 }
 #left_elements>*{
     margin: 10px;
